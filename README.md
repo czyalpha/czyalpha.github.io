@@ -1,4 +1,6 @@
-<h1 align='left'> Portfolio of Alpha </h1>
+<img align="center" src="https://github.com/mrastrange/mrastrange.github.io/blob/main/images/alphawebss.jpg"  height="500" width="800">
+<h1> - Visit : <a href="https://da.gd/alpha">Portfolio</a></h1>
+<h2 align='left'> Portfolio of Alpha </h2>
 <p> - Template : <a href="https://aj.lkn.io/">ajlkn</a></p>
 <p> - Image Source : <a href="https://unsplash.com/">Unsplash</a></p>
 
