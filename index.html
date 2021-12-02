@@ -21,6 +21,44 @@
 </head>
 
 <body>
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+
+<script>
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
+  
+  formbutton("create", {
+    action: "https://formspree.io/YOUR_FORM_ID",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+      },
+      {
+        type: "textarea",
+        label: "Name",
+        name: "message",
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+      },
+      { type: "submit" }
+    ],
+    styles: {
+      input: {
+        borderBottom: "1px solid #CCC",
+        borderRight: "1px solid #CCC",
+        padding: "5px 0"
+      },
+      submitInput: {padding: "0.75em 1em"}
+    },
+    initiallyVisible: true
+  });
+</script>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
