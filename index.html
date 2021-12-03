@@ -25,40 +25,15 @@
 
 <script>
   window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
-  
-  formbutton("create", {
-    action: "https://formspree.io/f/xknywydn",
-    method: "POST"
-    title: "How can we help?",
-    fields: [
-      { 
-        type: "email", 
-        label: "Email:", 
-        name: "email",
-        required: true,
-      },
-      {
-        type: "textarea",
-        label: "Name",
-        name: "message",
-      },
-      {
-        type: "textarea",
-        label: "Message:",
-        name: "message",
-      },
-      { type: "submit" }
-    ],
-    styles: {
-      input: {
-        borderBottom: "1px solid #CCC",
-        borderRight: "1px solid #CCC",
-        padding: "5px 0"
-      },
-      submitInput: {padding: "0.75em 1em"}
-    },
-    initiallyVisible: true
-  });
+
+  function updateFormbutton(title) {
+    formbutton("create", {
+      action: "https://formspree.io/f/xknywydn",
+      title: title,
+      initiallyVisible: true
+    });
+  }
+  updateFormbutton("How can we help?")    
 </script>
 
   <!-- ======= Mobile nav toggle button ======= -->
