@@ -53,48 +53,62 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
+.wrapper {
+  animation: x 1s ease-in-out alternate infinite 0s both;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #0563bb;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
+.wrapper > div {
+  animation: y 1s linear infinite 0s both;
 }
 
-@-webkit-keyframes animate-preloader {
+.wrapper:nth-of-type(2),
+.wrapper:nth-of-type(2) > div {
+  animation-delay: 0.1s;
+}
+.wrapper:nth-of-type(3),
+.wrapper:nth-of-type(3) > div {
+  animation-delay: 0.2s;
+}
+.wrapper:nth-of-type(4),
+.wrapper:nth-of-type(4) > div {
+  animation-delay: 0.3s;
+}
+.wrapper:nth-of-type(5),
+.wrapper:nth-of-type(5) > div {
+  animation-delay: 0.4s;
+}
+
+
+@-webkit-keyframes x {
   0% {
-    transform: rotate(0deg);
+            transform: translate(-100px, 0);
   }
   100% {
-    transform: rotate(360deg);
+            transform: translate(100px, 0)
   }
 }
 
-@keyframes animate-preloader {
+@keyframes x {
   0% {
-    transform: rotate(0deg);
+            transform: translate(-100px, 0);
   }
   100% {
-    transform: rotate(360deg);
+            transform: translate(100px, 0)
   }
+}
+
+
+@keyframes y {
+  25% {
+    transform: translate(0, -50px);
+  }
+  0%, 50%, 100% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0, 50px);
+  }
+
 }
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
