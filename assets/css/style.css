@@ -644,3 +644,51 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+* {
+  cursor: none;
+}
+.cursor {
+    width:20px;
+    height:20px;
+    border: 1px solid rgb(0, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: animate1 .5s infinite alternate;
+    pointer-events: none;
+}
+.cursor::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid rgb(0, 255, 255);
+    border-radius: 50%;
+    opacity: .5;
+    top:-8px;
+    left:-8px;
+    animation: animate2 .5s infinite alternate;
+}
+@keyframes animate1{
+from{
+transform:scale(1);
+}
+to{
+transform: scale(0.7);
+}
+}
+@keyframes animate2{
+    from{
+    transform:scale(1);
+    }
+    to{
+    transform: scale(0.4);
+    }
+    }
+    h1{
+        margin-top: 20vh;
+        color: #495670;
+        text-align: center;
+    }
