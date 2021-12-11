@@ -256,3 +256,28 @@
   });
 
 })()
+
+document.addEventListener('keydown', function() {
+  if (event.keyCode == 123) {
+    alert("Check Git btw");
+    return false;
+  } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+    alert("Check Git btw");
+    return false;
+  } else if (event.ctrlKey && event.keyCode == 85) {
+    alert("Check Git btw");
+    return false;
+  }
+}, false);
+
+if (document.addEventListener) {
+  document.addEventListener('contextmenu', function(e) {
+    alert("Check Git btw");
+    e.preventDefault();
+  }, false);
+} else {
+  document.attachEvent('oncontextmenu', function() {
+    alert("Check Git btw");
+    window.event.returnValue = false;
+  });
+}
